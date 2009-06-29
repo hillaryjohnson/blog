@@ -1,0 +1,24 @@
+
+
+<% div_for(blog, :class => 'span-14')  do  %>
+
+    <h3><%= link_to_unless_current h(blog.title), blog %></h3>
+
+    <h4 class="alt"><%= blog.author %>, <%= distance_of_time_in_words_to_now(blog.created_at)  %> ago</h4>
+
+    <div class="blog_body">
+      <% unless blog.image_url.blank? %>
+       <%= image_tag blog.image_url %>
+      <% end %>
+    <%= simple_format h(blog.body) %></div>
+    <% unless @blog %>
+      <% if blog.comments.blank? %>
+       <p class="alt commentline">Nobody has had anything to say about this post yet.</p>
+      <% else %>
+        <p class="alt commentline"><%= link_to 'This post has comments!', blog %></p>
+      <% end %>
+    <% end %>
+
+<% end %>
+
+ 

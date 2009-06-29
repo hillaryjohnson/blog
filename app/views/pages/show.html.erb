@@ -1,0 +1,18 @@
+
+<div id="pagetitle">
+    <h2><%=h @page.title %></h2>
+</div>
+
+
+<div id="pagebody">
+     <% unless @page.image_url.blank? %>
+       <%= image_tag @page.image_url %>
+       <% end %>
+
+  <%= @page.body %>
+</div>
+
+<br />
+ 
+
+<%= link_to 'Edit this page', edit_page_path(@page) if current_user %>

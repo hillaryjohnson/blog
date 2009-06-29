@@ -1,0 +1,19 @@
+
+
+
+<% div_for(design) do %>
+
+<h2 class="design"><a href="<%=h design.title_url %>"><%=h design.title %></a></h2>
+<div class="description alt">
+ <p> 
+  <%=h design.description %>
+</p>  
+</div>
+<a href="<%=h design.title_url %>">
+<%= image_tag design.image_url  %></a>
+
+
+
+
+<span class="edit"><%= link_to 'Edit', edit_design_path(design) if current_user %></span>
+<% end %>

@@ -1,0 +1,35 @@
+Getting started with rjs:
+
+Make sure you have the right libraries in your public/javascript folder. If you have others and are loading :all instead of :default, you can have conflicts that will make your rjs break. Maybe you loaded jquery to play with it then forgot it was there and are still loading :all? 
+
+In the controller, make sure you have told your actions to respond to format.js. It will look something like this:
+
+  def index
+  
+      @blogs = Blog.search(params[:search], params[:page])
+      respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @blogs }
+      format.js
+      format.atom
+    end 
+   
+  end
+  
+*
+
+looked at css tooltips, wanting to make one for the a:visited that says "honey, you've already been there and done that" but they seem to not be able to key off of css, only divs and classes.
+
+*
+
+I decided I hate image upload--for a site I run I might as well ftp the images into the approproate folder without an "image uploader", so I created columns for image_url in my posts and pages databases. This way, I can call the images in the posts and pages and do what I like with them in the css. No muss, no fuss. I like it way better than having an image upload function.
+
+*
+
+For now, I'm skipping textile. I'm not in love with it.
+
+*
+
+
+
+

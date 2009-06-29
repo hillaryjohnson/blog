@@ -1,0 +1,142 @@
+body {
+  background: transparent url(../images/graywallpaperbg.jpg);
+}
+
+.clear{
+  clear:both;
+}
+
+h1.blogtitle {
+  text-align: center;
+}
+
+#content{
+  background: #fff;
+  padding: 20px;
+}
+
+#menu {
+  padding: 10px 0 0 0;
+}
+
+#searchbox {
+  float:right;
+  margin: 0 0 20px 0;
+}
+
+#searchbox input {
+border: 1px solid #ddd;
+color: #777;
+}
+
+#searchbox .searchsubmit {
+  background-color: #ddd;
+ 
+}
+
+#comments {
+  padding: 0 0 20px 0;
+}
+
+.commentsubmit input {
+  border: 1px solid #ddd;
+color: #777;
+}
+
+.blog_body img, #pagebody img{
+  max-width: 250px;
+  float: right;
+  margin: 0 0 10px 10px;
+  
+}
+#pagebody img{
+  border: thin double #aaa;
+}
+  
+
+.design {
+  text-align: center;
+}
+
+.design img{
+  max-width: 546px;
+  margin: 0 auto;
+  border: 1px double #aaa;
+  padding: 2px;
+
+}
+
+.design h2{
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #aaa;
+  margin: 40px 0 0 0;
+}
+
+.design h2 a{
+  text-decoration: none;
+  color: #898989;
+}
+
+.design .description p {
+  color: #777;
+  margin: 0 0 .5em 0;
+  line-height: 1.1em;
+
+}
+
+#footer, #footer a {
+  text-align: center;
+  text-decoration: none;
+  color: #AAA;
+}
+
+a:link{color: #aa0000;}
+a:visited{color: #AAA; }
+a:hover {color: #9D4F4F;}
+
+h3 a:link {color: #aa0000; text-decoration: none;}
+h3 a:visited {color: #400000; text-decoration: none;}
+h3 a:hover {color: #9D4F4F; text-decoration: none;}
+
+
+.commentline a:link {color: #aa0000; text-decoration: none;}
+.commentline a:visited {color: #400000; text-decoration: none;}
+.commentline a:hover {color: #9D4F4F; text-decoration: none;}
+
+ul.tabs {
+  padding:
+}
+
+.commentline {
+  padding-top: .5em;
+}
+
+.commentline a:link {color:
+}
+
+.commentauthor, .trollauthor {
+  font-weight: bold;
+}
+
+
+input.button {
+	background: transparent;
+	text-align: left;
+	border: none;
+	font-size: 1.5em;
+	line-height: 1.1em;
+	color: #aaa;
+	font-family: georgia, garamond;
+	font-style: italic;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+
+.edit, .edit a {
+  text-align: right;
+  color: #AAA;
+}

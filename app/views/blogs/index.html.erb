@@ -1,0 +1,15 @@
+
+<div id="searchbox">
+  <% form_tag blogs_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil, :class => 'searchsubmit' %>
+  <% end %>
+</div>
+
+<div class="clear"></div>
+
+<%= render :partial => @blogs.reverse %><br />
+
+<%= link_to 'New', new_blog_path if current_user %>
+
+<%= will_paginate @blogs, :class => 'apple_pagination' %>

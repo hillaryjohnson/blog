@@ -1,0 +1,30 @@
+
+<%= render :partial => @blog %>
+
+<p>
+  <%= link_to 'Back to Posts', blogs_path %> 
+  <%= link_to 'Edit', edit_blog_path(@blog) if current_user %> 
+  <%= link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure about this?" if current_user %>
+</p>
+
+<h2>Comments</h2>
+
+<div id="comments">
+  <%= render :partial => @blog.comments %>
+</div>
+ 
+<% remote_form_for [@blog, Comment.new] do |f| %>
+    <p>    
+      <%= f.label :body, "Why not leave a comment?" %><br />
+      <%= f.text_area :body %><br />
+      <%= f.label :author, "Don't be a troll,<br /> put your name here:" %><br />
+      <%= f.text_field :author %><br />
+    </p>
+   <%= render :partial => '/captcha', :class => 'commentsubmit' %><%= f.submit "Fire Away", :class => 'commentsubmit' %></p>
+    
+    
+ 
+
+  <% end %>
+
+

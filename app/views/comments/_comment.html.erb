@@ -1,0 +1,13 @@
+
+  <% div_for comment do %>
+  <p>
+    <% if comment.author.blank? %>
+
+      <h3 class="alt trollauthor">Some anonymous troll says...</h3>
+
+  <% else %>
+  <h3 class="alt commentauthor"><%= h(comment.author) %> says...</h3>
+  <%end %>
+  <div class="commentbody"><%= h(comment.body) %></div>
+  </p>
+  <% end %>
