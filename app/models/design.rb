@@ -1,3 +1,3 @@
 class Design < ActiveRecord::Base
-  validates_presence_of :title, :design_url
+  validates_presence_of :title, :image_url
 end
