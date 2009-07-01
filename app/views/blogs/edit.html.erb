@@ -18,6 +18,7 @@
   <p>
     <%= f.label :image_url %><br />
     <%= f.text_field :image_url %>
+  </p>
   <p>
     <%= f.label :date %><br />
     <%= f.date_select :date %>
@@ -29,3 +30,4 @@
 
 <%= link_to 'Show', @blog %> |
 <%= link_to 'Back', blogs_path %>
+<%= link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure about this?" %>
