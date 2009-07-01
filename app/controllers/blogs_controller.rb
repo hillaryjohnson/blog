@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
-  before_filter :create_brain_buster, :only => [:show]
-  before_filter :validate_brain_buster, :only => [:show]
+    before_filter :create_brain_buster, :only => [:show]
+  before_filter :validate_brain_buster, :only => [:create, :update]
   # GET /blogs
   # GET /blogs.xml
   def index
@@ -23,7 +23,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.xml
   def show
     @blog = Blog.find(params[:id])
-    @comment = @blog.comments.find(params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @blog }
