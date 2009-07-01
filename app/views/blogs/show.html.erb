@@ -13,13 +13,15 @@
   <%= render :partial => @blog.comments %>
 </div>
  
-<% remote_form_for [@blog, Comment.new] do |f| %>
+<% form_for [@blog, Comment.new] do |f| %>
     <p>    
       <%= f.label :body, "Why not leave a comment?" %><br />
       <%= f.text_area :body %><br />
       <%= f.label :author, "Don't be a troll,<br /> put your name here:" %><br />
       <%= f.text_field :author %><br />
     </p>
+      <%= recaptcha_tags :display => { :theme => :clean, :tabindex => 5 } %>
+    
    <%= f.submit "Fire Away", :class => 'commentsubmit' %></p>
     
     

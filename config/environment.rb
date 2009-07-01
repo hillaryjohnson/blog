@@ -26,6 +26,9 @@ Rails::Initializer.run do |config|
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   config.plugins = [ :all ]
+  
+  ENV['RECAPTCHA_PUBLIC_KEY'] = '6LfTJQcAAAAAALAHt-c-P5jTzryFouwaNxsJLPN3'
+  ENV['RECAPTCHA_PRIVATE_KEY'] = '6LfTJQcAAAAAADe44avhOKvAHYPXQZmQKWECuSap'
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.

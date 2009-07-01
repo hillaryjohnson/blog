@@ -1,6 +1,6 @@
 class Blog < ActiveRecord::Base
   validates_presence_of :body, :title, :author
-  has_many :comments
+  has_many :comments, :dependent => :destroy
   
   
   def self.search(search, page)

@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
  map.archives "archives", :controller => "blogs", :action => "archives"
   
   
-  
+  map.resources :comments
 
 
   # The priority is based upon order of creation: first created -> highest priority.
