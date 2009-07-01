@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
-before_filter :create_brain_buster, :only => [:show]
-before_filter :validate_brain_buster, :only => [:create, :update]
+
   # GET /blogs
   # GET /blogs.xml
   def index
