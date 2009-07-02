@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  
+  before_filter :require_user, :except => [:index, :archives, :show]
   # GET /blogs
   # GET /blogs.xml
   def index

@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :current_user
+  helper_method :current_user_session, :current_user, :require_user
   
   private 
   
@@ -31,5 +31,14 @@ class ApplicationController < ActionController::Base
     @current_user = current_user_session && current_user_session.record
   end
   
-   
+  def require_user
+    unless current_user
+      flash[:notice] = "You must be logged in to access this page"
+      redirect_to :controller => :user_sessions, :action => 'new'
+      return false
+    end
+  end
+
+      
+
 end

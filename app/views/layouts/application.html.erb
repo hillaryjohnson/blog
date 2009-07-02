@@ -26,8 +26,7 @@
     <div id="menu">
       <ul class="tabs">
         <li <%= 'class="selected"' if @blog || @blogs %>><%= link_to "Blog", blogs_path %></li>
-        <li <%= 'class="selected"' if @design || @designs %>><%= link_to "Designs", designs_path %></li>
-        <li <%= 'class="selected"' if @blogs %>><%= link_to "Archives", archives_path %></li>
+        <li <%= 'class="selected"' if @design || @designs %>><%= link_to "Designs", designs_path %></li> 
         <li><a href="http://xoxiety.com/dymaxion/">Book</a></li>
         <li><a href="http://hillaryjohnson.typepad.com/hillary_johnsons_resume/">Resume</a></li>
           <% @tabs.each  do |page| -%>
@@ -45,13 +44,14 @@
 <hr />
 <div id="footer" >
   <div id="usernav" class="alt" >
-      <% if current_user %>
+    <%= link_to "Archives", archives_path %> 
+    
+      <% if current_user %> |
       <%= link_to "Edit Profile", edit_user_path(:current) %> |
         <%= link_to "Logout", logout_path %>
-      <% else %>
-        <%= link_to "Login", login_path %>
-      <% end %>
-    </div>
+      <% end %><br />
+      Website Design by Hillary Louise Johnson
+  </div>
 </div>
 </div>
 </div>

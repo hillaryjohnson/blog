@@ -1,4 +1,6 @@
 class DesignsController < ApplicationController
+  
+  before_filter :require_user, :except => [:index, :show]
   # GET /designs
   # GET /designs.xml
   def index

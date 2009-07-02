@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  
+  before_filter :require_user, :only => :index
 
   def create
     @blog = Blog.find(params[:blog_id])
@@ -20,8 +22,6 @@ class CommentsController < ApplicationController
    @comments = Comment.find(:all)
  end
  
- 
-  
   def destroy
     
     @comment = Comment.find(params[:id])
