@@ -11,8 +11,14 @@ h1.blogtitle {
 }
 
 #content{
+  margin-top: 40px;
   background: #fff;
   padding: 20px;
+    border: 4px double #aaa;
+  -moz-border-radius-bottomright: 14px;
+  -moz-border-radius-bottomleft: 14px;
+  -moz-border-radius-topright: 14px;
+  -moz-border-radius-topleft: 14px;
 }
 
 #menu {
@@ -22,15 +28,24 @@ h1.blogtitle {
 #searchbox {
   float:right;
   margin: 0 0 20px 0;
+  
 }
 
 #searchbox input {
 border: 1px solid #ddd;
 color: #777;
+-moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-topleft: 4px;
 }
 
 #searchbox .searchsubmit {
   background-color: #ddd;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-topleft: 4px;
  
 }
 
@@ -140,3 +155,4 @@ input.button {
   text-align: right;
   color: #AAA;
 }
+

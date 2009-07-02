@@ -6,7 +6,7 @@
 
 <div id="pagebody">
      <% unless @page.image_url.blank? %>
-       <%= image_tag @page.image_url %>
+       <%= image_tag @page.image_url, :class => 'page_image' %>
        <% end %>
 
   <%= @page.body %>
