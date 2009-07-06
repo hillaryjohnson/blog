@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.new(params[:comment])
     if verify_recaptcha(@comment) && @comment.save
+      Mail.deliver_comment_notification(@comment)
       flash[:notice] = "Thanks for commenting, you."
         respond_to do |format|
         format.html {redirect_to(blog_url(:id => @comment.blog, :anchor => dom_id(@comment)))}
