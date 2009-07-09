@@ -10,7 +10,7 @@
       <% unless blog.image_url.blank? %>
        <%= image_tag blog.image_url %>
       <% end %>
-    <%= simple_format h(blog.body) %></div>
+    <%= simple_format(blog.body) %></div>
     <% unless @blog %>
       <% if blog.comments.blank? %>
        <p class="alt commentline">Nobody has had anything to say about this post yet.</p>
